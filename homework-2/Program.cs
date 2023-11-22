@@ -26,10 +26,9 @@ namespace homework_2
 
             Console.WriteLine("Please input Original Price:");
             var originalPrice = Int32.Parse(Console.ReadLine());
+            var factor = (trcType == "-1") ? 1 : 0;
 
-
-            var factor = (trcType) = "-1" ? 1 : 0;
-            var profitLoss = (tradePrice - originalPrice) * transNominal;
+            var profitLoss = (tradePrice - originalPrice * factor) * transNominal;
             Console.WriteLine($"Your Profit/Loss value is {profitLoss}!");
 
         }
